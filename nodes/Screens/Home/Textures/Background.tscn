@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cvukounci5jff" path="res://assets/images/home/background.jpeg" id="1_qg8lt"]
 
 [node name="Background" type="TextureRect"]
-anchors_preset = -1
 offset_right = 2560.0
 offset_bottom = 1440.0
 scale = Vector2(0.45, 0.45)

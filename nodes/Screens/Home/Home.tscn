@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dctom5sgfcf5s"]
+[gd_scene load_steps=6 format=3 uid="uid://dctom5sgfcf5s"]
 
 [ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
 [ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
 [ext_resource type="PackedScene" uid="uid://dh73vpx6yl2tw" path="res://nodes/Screens/Home/Textures/BeaulieuPortrait.tscn" id="3_8elce"]
 [ext_resource type="PackedScene" uid="uid://cthls2meke2o1" path="res://nodes/Screens/Home/Textures/Title.tscn" id="4_dtdl4"]
+[ext_resource type="PackedScene" uid="uid://m7afeatyayst" path="res://nodes/Screens/Home/Buttons/Link.tscn" id="5_n5u1l"]
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -14,7 +15,6 @@ script = ExtResource("1_4h1wy")
 
 [node name="Background" parent="." instance=ExtResource("2_0wfuj")]
 layout_mode = 0
-anchors_preset = 0
 
 [node name="BeaulieuPortrait" parent="." instance=ExtResource("3_8elce")]
 layout_mode = 0
@@ -23,3 +23,25 @@ scale = Vector2(0.45, 0.45)
 [node name="Title" parent="." instance=ExtResource("4_dtdl4")]
 layout_mode = 0
 scale = Vector2(0.72, 0.72)
+
+[node name="MainMenu" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 450.0
+offset_right = 1100.0
+offset_bottom = 587.0
+theme_override_constants/separation = 8
+
+[node name="Play" parent="MainMenu" instance=ExtResource("5_n5u1l")]
+layout_mode = 2
+text = "Jouer"
+
+[node name="Options" parent="MainMenu" instance=ExtResource("5_n5u1l")]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+
+[node name="Credits" parent="MainMenu" instance=ExtResource("5_n5u1l")]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Crédits"
