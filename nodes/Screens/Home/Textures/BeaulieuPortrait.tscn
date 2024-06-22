@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dh73vpx6yl2tw"]
+[gd_scene load_steps=2 format=3 uid="uid://dh73vpx6yl2tw"]
+
+[ext_resource type="Texture2D" uid="uid://dwwl6qoa2yyri" path="res://assets/images/home/beaulieu_portrait.png" id="1_r5cmh"]
 
 [node name="BeaulieuPortrait" type="TextureRect"]
+texture = ExtResource("1_r5cmh")

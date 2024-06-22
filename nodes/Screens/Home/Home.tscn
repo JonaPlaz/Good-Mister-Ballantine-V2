@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dctom5sgfcf5s"]
+[gd_scene load_steps=5 format=3 uid="uid://dctom5sgfcf5s"]
 
 [ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
 [ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
+[ext_resource type="PackedScene" uid="uid://dh73vpx6yl2tw" path="res://nodes/Screens/Home/Textures/BeaulieuPortrait.tscn" id="3_8elce"]
+[ext_resource type="PackedScene" uid="uid://cthls2meke2o1" path="res://nodes/Screens/Home/Textures/Title.tscn" id="4_dtdl4"]
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -13,3 +15,11 @@ script = ExtResource("1_4h1wy")
 [node name="Background" parent="." instance=ExtResource("2_0wfuj")]
 layout_mode = 0
 anchors_preset = 0
+
+[node name="BeaulieuPortrait" parent="." instance=ExtResource("3_8elce")]
+layout_mode = 0
+scale = Vector2(0.45, 0.45)
+
+[node name="Title" parent="." instance=ExtResource("4_dtdl4")]
+layout_mode = 0
+scale = Vector2(0.72, 0.72)
