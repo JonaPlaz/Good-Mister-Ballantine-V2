@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c3hdmnj0rgch2"]
 
-[ext_resource type="Script" path="res://scripts/entities/Main/Game/Player/Aspiration/Aspiration.gd" id="1_hrd6l"]
+[ext_resource type="Script" path="res://scripts/Entities/Main/Game/Player/Aspiration/Aspiration.gd" id="1_vslv8"]
 
 [node name="Aspiration" type="Node2D"]
-script = ExtResource("1_hrd6l")
+script = ExtResource("1_vslv8")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dctom5sgfcf5s"]
+
+[ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
+[ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+script = ExtResource("1_4h1wy")
+
+[node name="Background" parent="." instance=ExtResource("2_0wfuj")]
+layout_mode = 0
+anchors_preset = 0

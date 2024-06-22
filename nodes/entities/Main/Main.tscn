@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://gxvmwhapuq05"]
 
-[ext_resource type="Script" path="res://scripts/entities/Main/Main.gd" id="1_msqvp"]
+[ext_resource type="Script" path="res://scripts/Entities/Main/Main.gd" id="1_ft2xw"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_msqvp")
+script = ExtResource("1_ft2xw")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cq147t280ttdr"]
 
-[ext_resource type="Script" path="res://scripts/entities/Main/Game/Stage/Text/Text.gd" id="1_7x57e"]
+[ext_resource type="Script" path="res://scripts/Entities/Main/Game/Stage/Text/Text.gd" id="1_uwb4l"]
 
 [node name="Text" type="Node2D"]
-script = ExtResource("1_7x57e")
+script = ExtResource("1_uwb4l")
