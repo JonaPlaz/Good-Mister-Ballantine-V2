@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctlvim5coxdk5"]
+
+[ext_resource type="Texture2D" uid="uid://bpxbo1dnfso6j" path="res://assets/images/home/brain_aspiration.jpeg" id="1_75u4e"]
+
+[node name="BrainAspiration" type="TextureRect"]
+texture = ExtResource("1_75u4e")

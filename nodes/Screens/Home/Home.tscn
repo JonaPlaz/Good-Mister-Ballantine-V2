@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dctom5sgfcf5s"]
+[gd_scene load_steps=7 format=3 uid="uid://dctom5sgfcf5s"]
 
 [ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
 [ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
 [ext_resource type="PackedScene" uid="uid://dh73vpx6yl2tw" path="res://nodes/Screens/Home/Textures/BeaulieuPortrait.tscn" id="3_8elce"]
 [ext_resource type="PackedScene" uid="uid://cthls2meke2o1" path="res://nodes/Screens/Home/Textures/Title.tscn" id="4_dtdl4"]
 [ext_resource type="PackedScene" uid="uid://m7afeatyayst" path="res://nodes/Screens/Home/Buttons/Link.tscn" id="5_n5u1l"]
+[ext_resource type="PackedScene" uid="uid://ctlvim5coxdk5" path="res://nodes/Screens/Home/Textures/BrainAspiration.tscn" id="6_3aee1"]
 
 [node name="Home" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1600.0
-offset_bottom = 900.0
+offset_right = 1152.0
+offset_bottom = 648.0
 script = ExtResource("1_4h1wy")
 
 [node name="Background" parent="." instance=ExtResource("2_0wfuj")]
@@ -45,3 +46,39 @@ text = "Options"
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Crédits"
+
+[node name="PlayMenu" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -72.5
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="VBoxContainer" parent="PlayMenu"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NewGame" parent="PlayMenu/Container" instance=ExtResource("5_n5u1l")]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Nouvelle Partie"
+
+[node name="Saves" parent="PlayMenu/Container" instance=ExtResource("5_n5u1l")]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Sauvegardes"
+
+[node name="Return" parent="PlayMenu/Container" instance=ExtResource("5_n5u1l")]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Retour"
+
+[node name="BrainAspiration" parent="." instance=ExtResource("6_3aee1")]
+layout_mode = 0
+
+[connection signal="pressed" from="MainMenu/Play" to="." method="handleClickPlay"]
+[connection signal="pressed" from="PlayMenu/Container/Return" to="." method="handleClickPlayReturn"]
