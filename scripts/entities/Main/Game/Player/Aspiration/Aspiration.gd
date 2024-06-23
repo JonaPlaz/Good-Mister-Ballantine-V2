@@ -64,7 +64,16 @@ func _init():
 	}
 	
 	special_ability = ""
-	
+
+func create(aspirationName: String) -> Aspiration:
+	match aspirationName:
+		'artist':
+			return Artist.new()
+		'entrepreneur':
+			return Entrepreneur.new()
+		_:
+			return null
+
 func get_comment() -> String:
 	return comment
 

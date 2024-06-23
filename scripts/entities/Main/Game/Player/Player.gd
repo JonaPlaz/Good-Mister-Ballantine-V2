@@ -5,8 +5,8 @@ class_name Player
 var aspiration: Aspiration
 var inventory: Inventory
 
-static func create(aspiration: Aspiration, inventory: Inventory) -> Player:
+func create(aspirationName: String) -> Player:
 	var player = Player.new()
-	player.aspiration = aspiration
-	player.inventory = inventory
+	player.aspiration = aspiration.create(aspirationName)
+	#player.inventory = inventory
 	return player
