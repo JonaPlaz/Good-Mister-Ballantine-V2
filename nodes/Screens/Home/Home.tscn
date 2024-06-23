@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dctom5sgfcf5s"]
+[gd_scene load_steps=8 format=3 uid="uid://dctom5sgfcf5s"]
 
 [ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
 [ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cthls2meke2o1" path="res://nodes/Screens/Home/Textures/Title.tscn" id="4_dtdl4"]
 [ext_resource type="PackedScene" uid="uid://m7afeatyayst" path="res://nodes/Screens/Home/Buttons/Link.tscn" id="5_n5u1l"]
 [ext_resource type="PackedScene" uid="uid://ctlvim5coxdk5" path="res://nodes/Screens/Home/Textures/BrainAspiration.tscn" id="6_3aee1"]
+[ext_resource type="PackedScene" uid="uid://bpoyfbhldvv52" path="res://nodes/Screens/Home/Buttons/AspirationLink.tscn" id="7_11h38"]
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -79,7 +80,94 @@ text = "Retour"
 
 [node name="BrainAspiration" parent="." instance=ExtResource("6_3aee1")]
 layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
 scale = Vector2(0.72, 0.72)
+
+[node name="AspirationNames" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Artist" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 710.0
+offset_top = 400.0
+offset_right = 865.0
+offset_bottom = 440.0
+text = "Artiste"
+
+[node name="Entrepreneur" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 330.0
+offset_top = 240.0
+offset_right = 485.0
+offset_bottom = 280.0
+text = "Entrepreneur"
+
+[node name="Executor" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 350.0
+offset_top = 330.0
+offset_right = 505.0
+offset_bottom = 370.0
+text = "Exécutant"
+
+[node name="Lazy" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 670.0
+offset_top = 170.0
+offset_right = 825.0
+offset_bottom = 210.0
+text = "Tire au flanc"
+
+[node name="Monk" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 670.0
+offset_top = 455.0
+offset_right = 825.0
+offset_bottom = 495.0
+text = "Moine"
+
+[node name="NaturalLeader" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 380.0
+offset_top = 150.0
+offset_right = 535.0
+offset_bottom = 190.0
+text = "Leader Naturel"
+
+[node name="Tricker" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 360.0
+offset_top = 425.0
+offset_right = 515.0
+offset_bottom = 465.0
+text = "Combinard"
+
+[node name="Unemployed" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 700.0
+offset_top = 230.0
+offset_right = 855.0
+offset_bottom = 270.0
+text = "Chômeur"
+
+[node name="UnionLeader" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 330.0
+offset_top = 280.0
+offset_right = 485.0
+offset_bottom = 320.0
+text = "Syndicaliste"
+
+[node name="Vagabond" parent="AspirationNames" instance=ExtResource("7_11h38")]
+layout_mode = 2
+offset_left = 720.0
+offset_top = 310.0
+offset_right = 875.0
+offset_bottom = 350.0
+text = "Vagabond"
 
 [connection signal="pressed" from="MainMenu/Play" to="." method="handleClickPlay"]
 [connection signal="pressed" from="PlayMenu/Container/NewGame" to="." method="handleClickNewGame"]

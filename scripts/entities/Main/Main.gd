@@ -1,3 +1,4 @@
+# les tscn entities sont peut être inutiles : à vérifier
 extends Node
 
 class_name Main
@@ -10,9 +11,6 @@ func addGame(game: Game) -> void:
 func getGames() -> Array[Game]:
 	return games
 
-func create(aspirationName: String) -> Main:
+func create() -> Main:
 	var main = Main.new()
-	var game = Game.new()
-	game.create(aspirationName)
-	main.addGame(game)
 	return main

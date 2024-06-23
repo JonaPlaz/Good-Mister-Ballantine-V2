@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpoyfbhldvv52"]
+
+[ext_resource type="FontFile" uid="uid://d5k0oyy81as6" path="res://assets/fonts/cambria.ttf" id="1_ua63u"]
+
+[node name="AspirationLink" type="LinkButton"]
+theme_override_fonts/font = ExtResource("1_ua63u")
+theme_override_font_sizes/font_size = 20
+underline = 2
