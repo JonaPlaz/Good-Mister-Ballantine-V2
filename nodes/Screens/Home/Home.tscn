@@ -79,6 +79,8 @@ text = "Retour"
 
 [node name="BrainAspiration" parent="." instance=ExtResource("6_3aee1")]
 layout_mode = 0
+scale = Vector2(0.72, 0.72)
 
 [connection signal="pressed" from="MainMenu/Play" to="." method="handleClickPlay"]
+[connection signal="pressed" from="PlayMenu/Container/NewGame" to="." method="handleClickNewGame"]
 [connection signal="pressed" from="PlayMenu/Container/Return" to="." method="handleClickPlayReturn"]
