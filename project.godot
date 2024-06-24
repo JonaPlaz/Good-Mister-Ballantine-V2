@@ -15,6 +15,10 @@ run/main_scene="res://nodes/Screens/Home/Home.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
 [rendering]
 
 renderer/rendering_method="mobile"

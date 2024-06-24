@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://dctom5sgfcf5s"]
+[gd_scene load_steps=10 format=3 uid="uid://dctom5sgfcf5s"]
 
 [ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
 [ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
 [ext_resource type="PackedScene" uid="uid://dh73vpx6yl2tw" path="res://nodes/Screens/Home/Textures/BeaulieuPortrait.tscn" id="3_8elce"]
-[ext_resource type="PackedScene" uid="uid://cthls2meke2o1" path="res://nodes/Screens/Home/Textures/Title.tscn" id="4_dtdl4"]
+[ext_resource type="PackedScene" uid="uid://cthls2meke2o1" path="res://nodes/Screens/Home/Textures/TitleGame.tscn" id="4_dtdl4"]
 [ext_resource type="PackedScene" uid="uid://m7afeatyayst" path="res://nodes/Screens/Home/Buttons/Link.tscn" id="5_n5u1l"]
 [ext_resource type="PackedScene" uid="uid://ctlvim5coxdk5" path="res://nodes/Screens/Home/Textures/BrainAspiration.tscn" id="6_3aee1"]
 [ext_resource type="PackedScene" uid="uid://bpoyfbhldvv52" path="res://nodes/Screens/Home/Buttons/AspirationLink.tscn" id="7_11h38"]
+[ext_resource type="PackedScene" uid="uid://cjqbj4atgfwg6" path="res://nodes/Screens/Home/Texts/Title.tscn" id="7_17gk0"]
+[ext_resource type="PackedScene" uid="uid://ct6x8u2yer1cs" path="res://nodes/Screens/Home/Textures/IdCard.tscn" id="8_k0x40"]
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -89,6 +91,14 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Title" parent="AspirationNames" instance=ExtResource("7_17gk0")]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 40.0
+offset_right = 605.0
+offset_bottom = 63.0
+text = "Sélection Aspiration"
+
 [node name="Artist" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
 offset_left = 710.0
@@ -169,6 +179,25 @@ offset_right = 875.0
 offset_bottom = 350.0
 text = "Vagabond"
 
+[node name="Return" parent="AspirationNames" instance=ExtResource("5_n5u1l")]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 580.0
+offset_right = 612.0
+offset_bottom = 614.0
+theme_override_font_sizes/font_size = 28
+text = "Retour"
+
+[node name="Id" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.72, 0.72)
+
+[node name="IdCard" parent="Id" instance=ExtResource("8_k0x40")]
+layout_mode = 2
+
 [connection signal="pressed" from="MainMenu/Play" to="." method="handleClickPlay"]
 [connection signal="pressed" from="PlayMenu/Container/NewGame" to="." method="handleClickNewGame"]
 [connection signal="pressed" from="PlayMenu/Container/Return" to="." method="handleClickPlayReturn"]
+[connection signal="pressed" from="AspirationNames/Return" to="." method="handleClickReturnFromAspiration"]

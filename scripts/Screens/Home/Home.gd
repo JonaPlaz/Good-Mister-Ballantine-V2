@@ -2,6 +2,7 @@ extends Node
 
 @onready var mainMenu = $MainMenu
 @onready var playMenu = $PlayMenu
+
 @onready var brainAspiration = $BrainAspiration
 @onready var aspirationNames = $AspirationNames
 
@@ -16,7 +17,11 @@ extends Node
 @onready var unionLeaderLinkButton = $AspirationNames/UnionLeader
 @onready var vagabondLinkButton = $AspirationNames/Vagabond
 
+@onready var returnLinkButtonFromAspiration = $AspirationNames/Return
+
 var aspirationEntity: Aspiration = null
+
+@onready var id = $Id
 
 func _ready():
 	playMenu.hide()
@@ -32,6 +37,7 @@ func _ready():
 	unemployedLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(unemployedLinkButton.text))
 	unionLeaderLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(unionLeaderLinkButton.text))
 	vagabondLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(vagabondLinkButton.text))
+	id.hide()
 	
 func handleClickPlay():
 	playMenu.show()
@@ -51,6 +57,10 @@ func handleClickAspirationLink(aspirationLinkText: String):
 		aspirationEntity.queue_free()
 	aspirationEntity = Aspiration.new()
 	aspirationEntity.create(aspirationNameMatched)
+	brainAspiration.hide()
+	aspirationNames.hide()
+	playMenu.hide()
+	id.show()
 	
 func aspirationMatching(aspirationLinkText: String):
 	match aspirationLinkText:
@@ -76,3 +86,7 @@ func aspirationMatching(aspirationLinkText: String):
 			return 'vagabond'
 		_:
 			return null
+
+func handleClickReturnFromAspiration():
+	brainAspiration.hide()
+	aspirationNames.hide()

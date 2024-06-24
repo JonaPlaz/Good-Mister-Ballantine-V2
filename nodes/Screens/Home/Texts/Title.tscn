@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjqbj4atgfwg6"]
+
+[ext_resource type="FontFile" uid="uid://d5k0oyy81as6" path="res://assets/fonts/cambria.ttf" id="1_c52ym"]
+
+[node name="Title" type="Label"]
+theme_override_fonts/font = ExtResource("1_c52ym")
+theme_override_font_sizes/font_size = 28
