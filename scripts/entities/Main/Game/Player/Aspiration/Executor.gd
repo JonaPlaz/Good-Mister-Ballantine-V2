@@ -46,4 +46,4 @@ func _init():
 		"general": "C’est bien ce que je pensais."
 	}
 	
-	special_ability = ""
+	specialAbility = ""

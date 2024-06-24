@@ -46,4 +46,4 @@ func _init():
 		"general": "C’est le mal du siècle si tu veux mon avis… Tout le monde veut entreprendre. Dans le dessein d’en faire le moins possible, paradoxalement..."
 	}
 	
-	special_ability = "Levée de fonds"
+	specialAbility = "Levée de fonds"

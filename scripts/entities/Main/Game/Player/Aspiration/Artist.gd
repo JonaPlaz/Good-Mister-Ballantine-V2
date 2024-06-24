@@ -46,4 +46,4 @@ func _init():
 		"general": "Il y a deux types d’artistes, ceux qui pratiquent par obsession et ceux qui utilise l’art comme une façade justifiant leur inutilité. Dans les deux cas, ils sont foncièrement égocentriques..."
 	}
 	
-	special_ability = "Trouver sa muse / trouver son apprenti / payé au chapeau"
+	specialAbility = "Trouver sa muse / trouver son apprenti / payé au chapeau"

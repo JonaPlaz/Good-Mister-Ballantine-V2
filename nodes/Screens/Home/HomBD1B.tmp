@@ -201,12 +201,7 @@ layout_mode = 2
 [node name="Comment" parent="Id" instance=ExtResource("10_wslxc")]
 layout_mode = 2
 
-[node name="Return" parent="Id" instance=ExtResource("5_n5u1l")]
-layout_mode = 2
-text = "Retour"
-
 [connection signal="pressed" from="MainMenu/Play" to="." method="handleClickPlay"]
 [connection signal="pressed" from="PlayMenu/Container/NewGame" to="." method="handleClickNewGame"]
 [connection signal="pressed" from="PlayMenu/Container/Return" to="." method="handleClickPlayReturn"]
 [connection signal="pressed" from="AspirationNames/Return" to="." method="handleClickReturnFromAspiration"]
-[connection signal="pressed" from="Id/Return" to="." method="handleClickReturnFromId"]

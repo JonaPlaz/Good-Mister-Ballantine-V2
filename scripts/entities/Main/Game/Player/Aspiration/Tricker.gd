@@ -46,4 +46,4 @@ func _init():
 		"general": "Tu es le genre à avancer que deux et deux font cinq. Le pire c’est qu’en générale tu as raison...",
 	}
 	
-	special_ability = "Tombé du camion"
+	specialAbility = "Tombé du camion"

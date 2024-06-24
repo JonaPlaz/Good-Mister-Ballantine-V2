@@ -46,4 +46,4 @@ func _init():
 		"general": "Dieu bénisse, les sans dents !  Les sans but, les sans-emploi ! Les inemployables, les inactifs et les démunies. Vous êtes feignant mais le plus important, c’est que vous êtes d’abord victime du système."
 	}
 	
-	special_ability = "Allocation chômage"
+	specialAbility = "Allocation chômage"

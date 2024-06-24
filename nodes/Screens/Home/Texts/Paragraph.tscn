@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmujirh44gwdc"]
+
+[ext_resource type="FontFile" uid="uid://d5k0oyy81as6" path="res://assets/fonts/cambria.ttf" id="1_jcao0"]
+
+[node name="Paragraph" type="Label"]
+theme_override_fonts/font = ExtResource("1_jcao0")
+theme_override_font_sizes/font_size = 24

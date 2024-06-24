@@ -46,4 +46,4 @@ func _init():
 		"general": "Il faut quand même pas mal lire dans ce jeu… Tu es sûr que ça ira ?"
 	}
 	
-	special_ability = ""
+	specialAbility = ""

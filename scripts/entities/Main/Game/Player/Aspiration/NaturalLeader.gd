@@ -46,4 +46,4 @@ func _init():
 		"general": "Bah dis donc, on a une haute opinion de soi à ce que je vois...",
 	}
 	
-	special_ability = "Parti politique"
+	specialAbility = "Parti politique"

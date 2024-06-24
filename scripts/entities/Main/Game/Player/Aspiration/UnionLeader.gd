@@ -46,4 +46,4 @@ func _init():
 		"general": "Nasdrovia camarade."
 	}
 	
-	special_ability = "Solidarité"
+	specialAbility = "Solidarité"

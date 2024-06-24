@@ -46,4 +46,4 @@ func _init():
 		"general": "Ton salut est autre part… Perso, je ne vois pas trop où...",
 	}
 	
-	special_ability = "Mendicité"
+	specialAbility = "Mendicité"

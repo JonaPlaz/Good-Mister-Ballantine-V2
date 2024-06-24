@@ -17,7 +17,7 @@ var conscience: Dictionary = {
 	"specific": "",
 }
 
-var special_ability: String = ""
+var specialAbility: String = ""
 
 func _init():
 	agility = {
@@ -63,7 +63,7 @@ func _init():
 		"general": ""
 	}
 	
-	special_ability = ""
+	specialAbility = ""
 
 func create(aspirationName: String) -> Aspiration:
 	match aspirationName:
@@ -90,32 +90,32 @@ func create(aspirationName: String) -> Aspiration:
 		_:
 			return null
 
-func get_comment() -> String:
+func getComment() -> String:
 	return comment
 
-func get_special_ability() -> String:
-	return special_ability
+func getSpecialAbility() -> String:
+	return specialAbility
 
-func get_eloquence() -> Dictionary:
+func getEloquence() -> Dictionary:
 	return eloquence
 
-func get_agility() -> Dictionary:
+func getAgility() -> Dictionary:
 	return agility
 
-func get_assiduity() -> Dictionary:
+func getAssiduity() -> Dictionary:
 	return assiduity
 
-func get_sixth_sense() -> Dictionary:
+func getSixthSense() -> Dictionary:
 	return sixthSense
 
-func get_smartness() -> Dictionary:
+func getSmartness() -> Dictionary:
 	return smartness
 
-func get_stamina() -> Dictionary:
+func getStamina() -> Dictionary:
 	return stamina
 
-func get_strength() -> Dictionary:
+func getStrength() -> Dictionary:
 	return strength
 
-func get_conscience() -> Dictionary:
+func getConscience() -> Dictionary:
 	return conscience

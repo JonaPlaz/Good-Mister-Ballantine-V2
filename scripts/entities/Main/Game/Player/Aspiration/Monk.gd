@@ -46,4 +46,4 @@ func _init():
 		"general": "Dans la tradition arcadienne les moines ne rigolent pas du tout au combat. Même ceux à tendance Monothéiste."
 	}
 	
-	special_ability = "Charité"
+	specialAbility = "Charité"
