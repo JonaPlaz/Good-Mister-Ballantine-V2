@@ -5,10 +5,33 @@ extends Node
 @onready var brainAspiration = $BrainAspiration
 @onready var aspirationNames = $AspirationNames
 
+@onready var artistLinkButton = $AspirationNames/Artist
+@onready var entrepreneurLinkButton = $AspirationNames/Entrepreneur
+@onready var executorLinkButton = $AspirationNames/Executor
+@onready var lazyLinkButton = $AspirationNames/Lazy
+@onready var monkLinkButton = $AspirationNames/Monk
+@onready var naturalLeaderLinkButton = $AspirationNames/NaturalLeader
+@onready var trickerLinkButton = $AspirationNames/Tricker
+@onready var unemployedLinkButton = $AspirationNames/Unemployed
+@onready var unionLeaderLinkButton = $AspirationNames/UnionLeader
+@onready var vagabondLinkButton = $AspirationNames/Vagabond
+
+var aspirationEntity: Aspiration = null
+
 func _ready():
 	playMenu.hide()
 	brainAspiration.hide()
 	aspirationNames.hide()
+	artistLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(artistLinkButton.text))
+	entrepreneurLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(entrepreneurLinkButton.text))
+	executorLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(executorLinkButton.text))
+	lazyLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(lazyLinkButton.text))
+	monkLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(monkLinkButton.text))
+	naturalLeaderLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(naturalLeaderLinkButton.text))
+	trickerLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(trickerLinkButton.text))
+	unemployedLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(unemployedLinkButton.text))
+	unionLeaderLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(unionLeaderLinkButton.text))
+	vagabondLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(vagabondLinkButton.text))
 	
 func handleClickPlay():
 	playMenu.show()
@@ -21,3 +44,35 @@ func handleClickPlayReturn():
 func handleClickNewGame():
 	brainAspiration.show()
 	aspirationNames.show()
+	
+func handleClickAspirationLink(aspirationLinkText: String):
+	var aspirationNameMatched = aspirationMatching(aspirationLinkText)
+	if aspirationEntity != null:
+		aspirationEntity.queue_free()
+	aspirationEntity = Aspiration.new()
+	aspirationEntity.create(aspirationNameMatched)
+	
+func aspirationMatching(aspirationLinkText: String):
+	match aspirationLinkText:
+		'Artiste':
+			return 'artist'
+		'Entrepreneur':
+			return 'entrepreneur'
+		'Exécutant':
+			return 'executor'
+		'Tire au flanc':
+			return 'lazy'
+		'Moine':
+			return 'monk'
+		'Leader naturel':
+			return 'naturalLeader'
+		'Combinard':
+			return 'tricker'
+		'Chômeur':
+			return 'unemployed'
+		'Syndicaliste':
+			return 'unionLeader'
+		'Vagabond':
+			return 'vagabond'
+		_:
+			return null

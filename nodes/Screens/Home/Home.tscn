@@ -135,7 +135,7 @@ offset_left = 380.0
 offset_top = 150.0
 offset_right = 535.0
 offset_bottom = 190.0
-text = "Leader Naturel"
+text = "Leader naturel"
 
 [node name="Tricker" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2

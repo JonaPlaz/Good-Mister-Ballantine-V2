@@ -71,6 +71,22 @@ func create(aspirationName: String) -> Aspiration:
 			return Artist.new()
 		'entrepreneur':
 			return Entrepreneur.new()
+		'executor':
+			return Executor.new()
+		'lazy':
+			return Lazy.new()
+		'monk':
+			return Monk.new()
+		'naturalLeader':
+			return NaturalLeader.new()
+		'tricker':
+			return Tricker.new()
+		'unemployed':
+			return Unemployed.new()
+		'unionLeader':
+			return UnionLeader.new()
+		'vagabond':
+			return Vagabond.new()
 		_:
 			return null
 
