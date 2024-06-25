@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxeoipm3ohvf5"]
+
+[ext_resource type="FontFile" uid="uid://d5k0oyy81as6" path="res://assets/fonts/cambria.ttf" id="1_vs7kn"]
+
+[node name="AspirationSpecialAbility" type="Label"]
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_vs7kn")
+theme_override_font_sizes/font_size = 24

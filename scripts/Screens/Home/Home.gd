@@ -28,6 +28,12 @@ var aspirationEntity: Aspiration = null
 @onready var comment = $Id/CommentAndConscience/Comment
 @onready var generalConscience = $Id/CommentAndConscience/GeneralConscience
 @onready var specificConscience = $Id/CommentAndConscience/SpecificConscience
+@onready var aspirationName = $Id/AspirationName
+@onready var aspirationSpecialAbility = $Id/AspirationSpecialAbility
+
+@onready var entertainment = $Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes/Entertainment
+@onready var stealthAndInfiltration = $Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes/StealthAndInfiltration
+@onready var magicTricksAndGambling = $Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes/MagicTricksAndGambling
 
 @onready var returnLinkFromId = $Id/Return
 
@@ -70,6 +76,11 @@ func handleClickAspirationLink(aspirationLinkText: String):
 	comment.text = aspirationEntity.getComment()
 	generalConscience.text = aspirationEntity.getConscience()['general']
 	specificConscience.text = aspirationEntity.getConscience()['specific']
+	aspirationName.text = aspirationLinkText
+	aspirationSpecialAbility.text = aspirationEntity.getSpecialAbility()
+	entertainment.text = str(aspirationEntity.getAgility()['entertainment'])
+	stealthAndInfiltration.text = str(aspirationEntity.getAgility()['stealth_and_infiltration'])
+	magicTricksAndGambling.text = str(aspirationEntity.getAgility()['magic_tricks_and_gambling'])
 	id.show()
 	
 func aspirationMatching(aspirationLinkText: String):

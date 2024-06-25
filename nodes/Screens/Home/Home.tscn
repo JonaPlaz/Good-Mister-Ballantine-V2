@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dctom5sgfcf5s"]
+[gd_scene load_steps=17 format=3 uid="uid://dctom5sgfcf5s"]
 
 [ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
 [ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
@@ -11,6 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://ct6x8u2yer1cs" path="res://nodes/Screens/Home/Textures/IdCard.tscn" id="8_k0x40"]
 [ext_resource type="PackedScene" uid="uid://bq21ed21r4s3m" path="res://nodes/Screens/Home/Textures/Avatar.tscn" id="10_w67m5"]
 [ext_resource type="PackedScene" uid="uid://bmujirh44gwdc" path="res://nodes/Screens/Home/Texts/Paragraph.tscn" id="10_wslxc"]
+[ext_resource type="PackedScene" uid="uid://bxh1i73ujkr3" path="res://nodes/Screens/Home/Texts/AspirationName.tscn" id="12_bt05l"]
+[ext_resource type="PackedScene" uid="uid://bxeoipm3ohvf5" path="res://nodes/Screens/Home/Texts/AspirationSpecialAbility.tscn" id="13_5snk1"]
+[ext_resource type="PackedScene" uid="uid://bw8gxcc2kv0w7" path="res://nodes/Screens/Home/Texts/AspirationAbilityName.tscn" id="14_ny567"]
+[ext_resource type="PackedScene" uid="uid://5bd62qbv5772" path="res://nodes/Screens/Home/Texts/AspirationAbilityDictionaryName.tscn" id="15_fwmqq"]
+[ext_resource type="PackedScene" uid="uid://c52slcxji054l" path="res://nodes/Screens/Home/Texts/AspirationAbilityDictionaryNote.tscn" id="16_ip16u"]
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -233,6 +238,301 @@ offset_top = 180.0
 offset_right = 1050.0
 offset_bottom = 180.0
 scale = Vector2(0.35, 0.35)
+
+[node name="AspirationName" parent="Id" instance=ExtResource("12_bt05l")]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 465.0
+offset_right = 1501.0
+offset_bottom = 494.0
+
+[node name="AspirationSpecialAbility" parent="Id" instance=ExtResource("13_5snk1")]
+layout_mode = 0
+offset_left = 1550.0
+offset_top = 510.0
+offset_right = 1551.0
+offset_bottom = 539.0
+
+[node name="AbilitiesContainer" type="VBoxContainer" parent="Id"]
+layout_mode = 0
+offset_left = 1365.0
+offset_top = 565.0
+offset_right = 2074.0
+offset_bottom = 657.0
+theme_override_constants/separation = -9
+
+[node name="AgilityContainer" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer" instance=ExtResource("14_ny567")]
+layout_mode = 2
+text = "Agilité"
+
+[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer"]
+custom_minimum_size = Vector2(430, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Connaissances historiques & politique"
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Cuisine & botanique"
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Religion & arcane"
+
+[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer"]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="AgilityContainer2" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer2" instance=ExtResource("14_ny567")]
+layout_mode = 2
+text = "Agilité"
+
+[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer2"]
+custom_minimum_size = Vector2(430, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Connaissances historiques & politique"
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Cuisine & botanique"
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Religion & arcane"
+
+[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer2"]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="AgilityContainer3" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer3" instance=ExtResource("14_ny567")]
+layout_mode = 2
+text = "Agilité"
+
+[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer3"]
+custom_minimum_size = Vector2(430, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Connaissances historiques & politique"
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Cuisine & botanique"
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Religion & arcane"
+
+[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer3"]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="AgilityContainer4" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer4" instance=ExtResource("14_ny567")]
+layout_mode = 2
+text = "Agilité"
+
+[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer4"]
+custom_minimum_size = Vector2(430, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Connaissances historiques & politique"
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Cuisine & botanique"
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Religion & arcane"
+
+[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer4"]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="AgilityContainer5" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer5" instance=ExtResource("14_ny567")]
+layout_mode = 2
+text = "Agilité"
+
+[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer5"]
+custom_minimum_size = Vector2(430, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Connaissances historiques & politique"
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Cuisine & botanique"
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Religion & arcane"
+
+[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer5"]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="AgilityContainer6" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer6" instance=ExtResource("14_ny567")]
+layout_mode = 2
+text = "Agilité"
+
+[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer6"]
+custom_minimum_size = Vector2(430, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Connaissances historiques & politique"
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Cuisine & botanique"
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Religion & arcane"
+
+[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer6"]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="AgilityContainer7" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer7" instance=ExtResource("14_ny567")]
+layout_mode = 2
+text = "Agilité"
+
+[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer7"]
+custom_minimum_size = Vector2(430, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Connaissances historiques & politique"
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Cuisine & botanique"
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Religion & arcane"
+
+[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer7"]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
 
 [node name="Return" parent="Id" instance=ExtResource("5_n5u1l")]
 layout_mode = 0
