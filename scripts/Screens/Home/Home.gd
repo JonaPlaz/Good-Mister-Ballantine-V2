@@ -1,5 +1,7 @@
 extends Node
 
+@onready var titleGame = $TitleGame
+
 @onready var mainMenu = $MainMenu
 @onready var playMenu = $PlayMenu
 
@@ -22,7 +24,10 @@ extends Node
 var aspirationEntity: Aspiration = null
 
 @onready var id = $Id
-@onready var comment = $Id/Comment
+@onready var avatar = $Id/Avatar
+@onready var comment = $Id/CommentAndConscience/Comment
+@onready var generalConscience = $Id/CommentAndConscience/GeneralConscience
+@onready var specificConscience = $Id/CommentAndConscience/SpecificConscience
 
 @onready var returnLinkFromId = $Id/Return
 
@@ -55,12 +60,16 @@ func handleClickNewGame():
 	aspirationNames.show()
 	
 func handleClickAspirationLink(aspirationLinkText: String):
+	titleGame.hide()
 	var aspirationNameMatched = aspirationMatching(aspirationLinkText)
 	aspirationEntity = Aspiration.new().create(aspirationNameMatched)
 	brainAspiration.hide()
 	aspirationNames.hide()
 	playMenu.hide()
+	avatar.texture = load("res://assets/images/home/avatars/" + aspirationNameMatched + ".png")
 	comment.text = aspirationEntity.getComment()
+	generalConscience.text = aspirationEntity.getConscience()['general']
+	specificConscience.text = aspirationEntity.getConscience()['specific']
 	id.show()
 	
 func aspirationMatching(aspirationLinkText: String):
@@ -91,8 +100,10 @@ func aspirationMatching(aspirationLinkText: String):
 func handleClickReturnFromAspiration():
 	brainAspiration.hide()
 	aspirationNames.hide()
+	playMenu.show()
 
 func handleClickReturnFromId():
 	id.hide()
+	titleGame.show()
 	brainAspiration.show()
 	aspirationNames.show()

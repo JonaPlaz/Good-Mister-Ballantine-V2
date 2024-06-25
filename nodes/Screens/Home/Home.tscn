@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dctom5sgfcf5s"]
+[gd_scene load_steps=12 format=3 uid="uid://dctom5sgfcf5s"]
 
 [ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
 [ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bpoyfbhldvv52" path="res://nodes/Screens/Home/Buttons/AspirationLink.tscn" id="7_11h38"]
 [ext_resource type="PackedScene" uid="uid://cjqbj4atgfwg6" path="res://nodes/Screens/Home/Texts/Title.tscn" id="7_17gk0"]
 [ext_resource type="PackedScene" uid="uid://ct6x8u2yer1cs" path="res://nodes/Screens/Home/Textures/IdCard.tscn" id="8_k0x40"]
+[ext_resource type="PackedScene" uid="uid://bq21ed21r4s3m" path="res://nodes/Screens/Home/Textures/Avatar.tscn" id="10_w67m5"]
 [ext_resource type="PackedScene" uid="uid://bmujirh44gwdc" path="res://nodes/Screens/Home/Texts/Paragraph.tscn" id="10_wslxc"]
 
 [node name="Home" type="Control"]
@@ -20,21 +21,21 @@ script = ExtResource("1_4h1wy")
 
 [node name="Background" parent="." instance=ExtResource("2_0wfuj")]
 layout_mode = 0
+scale = Vector2(0.63, 0.63)
 
 [node name="BeaulieuPortrait" parent="." instance=ExtResource("3_8elce")]
 layout_mode = 0
-scale = Vector2(0.45, 0.45)
+scale = Vector2(0.63, 0.63)
 
-[node name="Title" parent="." instance=ExtResource("4_dtdl4")]
+[node name="TitleGame" parent="." instance=ExtResource("4_dtdl4")]
 layout_mode = 0
-scale = Vector2(0.72, 0.72)
 
 [node name="MainMenu" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 950.0
-offset_top = 450.0
-offset_right = 1100.0
-offset_bottom = 587.0
+offset_left = 1350.0
+offset_top = 700.0
+offset_right = 1500.0
+offset_bottom = 845.0
 theme_override_constants/separation = 8
 
 [node name="Play" parent="MainMenu" instance=ExtResource("5_n5u1l")]
@@ -57,8 +58,9 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -72.5
-offset_bottom = 72.5
+offset_top = 76.0
+offset_right = 448.0
+offset_bottom = 221.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -85,125 +87,174 @@ text = "Retour"
 layout_mode = 0
 offset_right = 1600.0
 offset_bottom = 900.0
-scale = Vector2(0.72, 0.72)
 
 [node name="AspirationNames" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Title" parent="AspirationNames" instance=ExtResource("7_17gk0")]
 layout_mode = 0
-offset_left = 450.0
+offset_left = 680.0
 offset_top = 40.0
-offset_right = 605.0
-offset_bottom = 63.0
+offset_right = 922.0
+offset_bottom = 74.0
 text = "Sélection Aspiration"
 
 [node name="Artist" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 710.0
-offset_top = 400.0
-offset_right = 865.0
-offset_bottom = 440.0
+offset_left = 990.0
+offset_top = 560.0
+offset_right = 1145.0
+offset_bottom = 600.0
 text = "Artiste"
 
 [node name="Entrepreneur" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 330.0
-offset_top = 240.0
-offset_right = 485.0
-offset_bottom = 280.0
+offset_left = 500.0
+offset_top = 340.0
+offset_right = 655.0
+offset_bottom = 380.0
 text = "Entrepreneur"
 
 [node name="Executor" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 350.0
-offset_top = 330.0
-offset_right = 505.0
-offset_bottom = 370.0
+offset_left = 520.0
+offset_top = 460.0
+offset_right = 675.0
+offset_bottom = 500.0
 text = "Exécutant"
 
 [node name="Lazy" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 670.0
-offset_top = 170.0
-offset_right = 825.0
-offset_bottom = 210.0
+offset_left = 910.0
+offset_top = 220.0
+offset_right = 1065.0
+offset_bottom = 260.0
 text = "Tire au flanc"
 
 [node name="Monk" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 670.0
-offset_top = 455.0
-offset_right = 825.0
-offset_bottom = 495.0
+offset_left = 940.0
+offset_top = 630.0
+offset_right = 1095.0
+offset_bottom = 670.0
 text = "Moine"
 
 [node name="NaturalLeader" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 380.0
-offset_top = 150.0
-offset_right = 535.0
-offset_bottom = 190.0
+offset_left = 560.0
+offset_top = 240.0
+offset_right = 715.0
+offset_bottom = 280.0
 text = "Leader naturel"
 
 [node name="Tricker" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 360.0
-offset_top = 425.0
-offset_right = 515.0
-offset_bottom = 465.0
+offset_left = 550.0
+offset_top = 600.0
+offset_right = 705.0
+offset_bottom = 640.0
 text = "Combinard"
 
 [node name="Unemployed" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 700.0
-offset_top = 230.0
-offset_right = 855.0
-offset_bottom = 270.0
+offset_left = 970.0
+offset_top = 320.0
+offset_right = 1125.0
+offset_bottom = 360.0
 text = "Chômeur"
 
 [node name="UnionLeader" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 330.0
-offset_top = 280.0
-offset_right = 485.0
-offset_bottom = 320.0
+offset_left = 500.0
+offset_top = 390.0
+offset_right = 655.0
+offset_bottom = 430.0
 text = "Syndicaliste"
 
 [node name="Vagabond" parent="AspirationNames" instance=ExtResource("7_11h38")]
 layout_mode = 2
-offset_left = 720.0
-offset_top = 310.0
-offset_right = 875.0
-offset_bottom = 350.0
+offset_left = 1000.0
+offset_top = 430.0
+offset_right = 1155.0
+offset_bottom = 470.0
 text = "Vagabond"
 
 [node name="Return" parent="AspirationNames" instance=ExtResource("5_n5u1l")]
 layout_mode = 0
-offset_left = 530.0
-offset_top = 580.0
-offset_right = 612.0
-offset_bottom = 614.0
+offset_left = 760.0
+offset_top = 800.0
+offset_right = 842.0
+offset_bottom = 834.0
 theme_override_font_sizes/font_size = 28
 text = "Retour"
 
-[node name="Id" type="PanelContainer" parent="."]
-layout_mode = 0
+[node name="Id" type="Control" parent="."]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.72, 0.72)
 
+[node name="CommentAndConscience" type="VBoxContainer" parent="Id"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 150.0
+offset_right = 800.0
+offset_bottom = 292.0
+theme_override_constants/separation = 20
+
+[node name="Comment" parent="Id/CommentAndConscience" instance=ExtResource("10_wslxc")]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+
+[node name="GeneralConscience" parent="Id/CommentAndConscience" instance=ExtResource("10_wslxc")]
+custom_minimum_size = Vector2(620, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+
+[node name="SpecificConscience" parent="Id/CommentAndConscience" instance=ExtResource("10_wslxc")]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+
 [node name="IdCard" parent="Id" instance=ExtResource("8_k0x40")]
 layout_mode = 2
+offset_right = 1600.0
+offset_bottom = 900.0
+scale = Vector2(1.4, 1.4)
 
-[node name="Comment" parent="Id" instance=ExtResource("10_wslxc")]
-layout_mode = 2
+[node name="Avatar" parent="Id" instance=ExtResource("10_w67m5")]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 180.0
+offset_right = 1050.0
+offset_bottom = 180.0
+scale = Vector2(0.35, 0.35)
 
 [node name="Return" parent="Id" instance=ExtResource("5_n5u1l")]
-layout_mode = 2
+layout_mode = 0
+offset_left = 850.0
+offset_top = 1190.0
+offset_right = 944.0
+offset_bottom = 1229.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
+theme_override_font_sizes/font_size = 32
 text = "Retour"
+
+[node name="StartGame" parent="Id" instance=ExtResource("5_n5u1l")]
+layout_mode = 2
+offset_left = 1200.0
+offset_top = 1190.0
+offset_right = 1488.0
+offset_bottom = 1229.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.051971, 0.051971, 0.051971, 1)
+theme_override_font_sizes/font_size = 32
+text = "Commencer la partie"
 
 [connection signal="pressed" from="MainMenu/Play" to="." method="handleClickPlay"]
 [connection signal="pressed" from="PlayMenu/Container/NewGame" to="." method="handleClickNewGame"]
