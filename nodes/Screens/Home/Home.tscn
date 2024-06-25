@@ -263,31 +263,32 @@ theme_override_constants/separation = -9
 
 [node name="AgilityContainer" type="HBoxContainer" parent="Id/AbilitiesContainer"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 10
 
 [node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer" instance=ExtResource("14_ny567")]
 layout_mode = 2
 text = "Agilité"
 
 [node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer"]
-custom_minimum_size = Vector2(430, 0)
+custom_minimum_size = Vector2(470, 0)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = -8
 
 [node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Connaissances historiques & politique"
+text = "Kick-ball, jeux vidéos & autres divertissements"
 
 [node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Cuisine & botanique"
+text = "Discrétion & infiltration"
 
 [node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Religion & arcane"
+text = "Prestidigitation & jeux d'argent"
 
 [node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer"]
+custom_minimum_size = Vector2(105, 0)
 layout_mode = 2
 theme_override_constants/separation = -8
 
@@ -300,238 +301,244 @@ layout_mode = 2
 [node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="AgilityContainer2" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+[node name="AssiduityContainer" type="HBoxContainer" parent="Id/AbilitiesContainer"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 10
 
-[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer2" instance=ExtResource("14_ny567")]
+[node name="AssiduityName" parent="Id/AbilitiesContainer/AssiduityContainer" instance=ExtResource("14_ny567")]
 layout_mode = 2
-text = "Agilité"
+text = "Assiduité"
 
-[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer2"]
-custom_minimum_size = Vector2(430, 0)
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = -8
-
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
-layout_mode = 2
-text = "Connaissances historiques & politique"
-
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
-layout_mode = 2
-text = "Cuisine & botanique"
-
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
-layout_mode = 2
-text = "Religion & arcane"
-
-[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer2"]
-layout_mode = 2
-theme_override_constants/separation = -8
-
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
-layout_mode = 2
-
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
-layout_mode = 2
-
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer2/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
-layout_mode = 2
-
-[node name="AgilityContainer3" type="HBoxContainer" parent="Id/AbilitiesContainer"]
-layout_mode = 2
-theme_override_constants/separation = 100
-
-[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer3" instance=ExtResource("14_ny567")]
-layout_mode = 2
-text = "Agilité"
-
-[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer3"]
-custom_minimum_size = Vector2(430, 0)
+[node name="AssiduityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AssiduityContainer"]
+custom_minimum_size = Vector2(470, 0)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="HistoryAndPolitics" parent="Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
 text = "Connaissances historiques & politique"
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="CookingAndBotany" parent="Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
 text = "Cuisine & botanique"
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="ReligionAndArcane" parent="Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
 text = "Religion & arcane"
 
-[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer3"]
+[node name="AssiduityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AssiduityContainer"]
+custom_minimum_size = Vector2(105, 0)
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="HistoryAndPolitics" parent="Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="CookingAndBotany" parent="Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer3/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="ReligionAndArcane" parent="Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="AgilityContainer4" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+[node name="EloquenceContainer" type="HBoxContainer" parent="Id/AbilitiesContainer"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 10
 
-[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer4" instance=ExtResource("14_ny567")]
+[node name="EloquenceName" parent="Id/AbilitiesContainer/EloquenceContainer" instance=ExtResource("14_ny567")]
 layout_mode = 2
-text = "Agilité"
+text = "Éloquence"
 
-[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer4"]
-custom_minimum_size = Vector2(430, 0)
+[node name="EloquenceDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/EloquenceContainer"]
+custom_minimum_size = Vector2(470, 0)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="BargainingAndInvestment" parent="Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Connaissances historiques & politique"
+text = "Marchandage & investissement"
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="LieAndPersuasion" parent="Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Cuisine & botanique"
+text = "Mensonges & persuasion"
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="ForeignLanguage" parent="Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Religion & arcane"
+text = "Langue étrangère"
 
-[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer4"]
+[node name="EloquenceDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/EloquenceContainer"]
+custom_minimum_size = Vector2(105, 0)
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="BargainingAndInvestment" parent="Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="LieAndPersuasion" parent="Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer4/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="ForeignLanguage" parent="Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="AgilityContainer5" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+[node name="SixthSenseContainer" type="HBoxContainer" parent="Id/AbilitiesContainer"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 10
 
-[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer5" instance=ExtResource("14_ny567")]
+[node name="SixthSenseName" parent="Id/AbilitiesContainer/SixthSenseContainer" instance=ExtResource("14_ny567")]
 layout_mode = 2
-text = "Agilité"
+text = "6 sens"
 
-[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer5"]
-custom_minimum_size = Vector2(430, 0)
+[node name="SixthSenseDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/SixthSenseContainer"]
+custom_minimum_size = Vector2(470, 0)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="FeelingAndAction" parent="Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Connaissances historiques & politique"
+text = "Intuition, initiative"
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="StealingAndLocksmithing" parent="Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Cuisine & botanique"
+text = "Vol & serrurerie"
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="ColdBlood" parent="Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Religion & arcane"
+text = "Sang froid"
 
-[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer5"]
+[node name="SixthSenseDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/SixthSenseContainer"]
+custom_minimum_size = Vector2(105, 0)
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="FeelingAndAction" parent="Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="StealingAndLocksmithing" parent="Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer5/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="ColdBlood" parent="Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="AgilityContainer6" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+[node name="SmartnessContainer" type="HBoxContainer" parent="Id/AbilitiesContainer"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 10
 
-[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer6" instance=ExtResource("14_ny567")]
+[node name="SmartnessName" parent="Id/AbilitiesContainer/SmartnessContainer" instance=ExtResource("14_ny567")]
 layout_mode = 2
-text = "Agilité"
+text = "Intelligence"
 
-[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer6"]
-custom_minimum_size = Vector2(430, 0)
+[node name="SmartnessDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/SmartnessContainer"]
+custom_minimum_size = Vector2(470, 0)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="Logic" parent="Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Connaissances historiques & politique"
+text = "Logique"
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="EngineeringAndMathematics" parent="Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Cuisine & botanique"
+text = "Ingénierie & mathématiques"
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="EmpathyAndPsychology" parent="Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Religion & arcane"
+text = "Empathie, psychologie"
 
-[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer6"]
+[node name="SmartnessDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/SmartnessContainer"]
+custom_minimum_size = Vector2(105, 0)
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="Logic" parent="Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="EngineeringAndMathematics" parent="Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer6/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="EmpathyAndPsychology" parent="Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="AgilityContainer7" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+[node name="StaminaContainer" type="HBoxContainer" parent="Id/AbilitiesContainer"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 10
 
-[node name="AgilityName" parent="Id/AbilitiesContainer/AgilityContainer7" instance=ExtResource("14_ny567")]
+[node name="StaminaName" parent="Id/AbilitiesContainer/StaminaContainer" instance=ExtResource("14_ny567")]
 layout_mode = 2
-text = "Agilité"
+text = "Endurance"
 
-[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer7"]
-custom_minimum_size = Vector2(430, 0)
+[node name="StaminaDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/StaminaContainer"]
+custom_minimum_size = Vector2(470, 0)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="Patience" parent="Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Connaissances historiques & politique"
+text = "Patience"
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="PainResistance" parent="Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Cuisine & botanique"
+text = "Rapport à la douleur"
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
+[node name="DistanceWalking" parent="Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
-text = "Religion & arcane"
+text = "Marche à pieds, randonnée & autre marathon"
 
-[node name="AgilityDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer7"]
+[node name="StaminaDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/StaminaContainer"]
+custom_minimum_size = Vector2(105, 0)
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="Patience" parent="Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="StealthAndInfiltration" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="PainResistance" parent="Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
-[node name="MagicTricksAndGambling" parent="Id/AbilitiesContainer/AgilityContainer7/AgilityDictionaryNotes" instance=ExtResource("16_ip16u")]
+[node name="DistanceWalking" parent="Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="StrengthContainer" type="HBoxContainer" parent="Id/AbilitiesContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="StrengthName" parent="Id/AbilitiesContainer/StrengthContainer" instance=ExtResource("14_ny567")]
+layout_mode = 2
+text = "Force"
+
+[node name="StrengthDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/StrengthContainer"]
+custom_minimum_size = Vector2(470, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -8
+
+[node name="PowerLifting" parent="Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Haltérophilie"
+
+[node name="SelfDefenseAndArcadianWrestling" parent="Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Self defense & lutte arcadienne"
+
+[node name="WeaponsHandling" parent="Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNames" instance=ExtResource("15_fwmqq")]
+layout_mode = 2
+text = "Maniement des armes"
+
+[node name="StrengthDictionaryNotes" type="VBoxContainer" parent="Id/AbilitiesContainer/StrengthContainer"]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="PowerLifting" parent="Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="SelfDefenseAndArcadianWrestling" parent="Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNotes" instance=ExtResource("16_ip16u")]
+layout_mode = 2
+
+[node name="WeaponsHandling" parent="Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNotes" instance=ExtResource("16_ip16u")]
 layout_mode = 2
 
 [node name="Return" parent="Id" instance=ExtResource("5_n5u1l")]

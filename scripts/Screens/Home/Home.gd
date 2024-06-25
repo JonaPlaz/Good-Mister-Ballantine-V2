@@ -34,6 +34,24 @@ var aspirationEntity: Aspiration = null
 @onready var entertainment = $Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes/Entertainment
 @onready var stealthAndInfiltration = $Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes/StealthAndInfiltration
 @onready var magicTricksAndGambling = $Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNotes/MagicTricksAndGambling
+@onready var historyAndPolitics = $Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNotes/HistoryAndPolitics
+@onready var cookingAndBotany = $Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNotes/CookingAndBotany
+@onready var religionAndArcane = $Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNotes/ReligionAndArcane
+@onready var bargainingAndInvestment = $Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNotes/BargainingAndInvestment
+@onready var lieAndPersuasion = $Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNotes/LieAndPersuasion
+@onready var foreignLanguage = $Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNotes/ForeignLanguage
+@onready var feelingAndAction = $Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNotes/FeelingAndAction
+@onready var stealingAndLocksmithing = $Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNotes/StealingAndLocksmithing
+@onready var coldBlood = $Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNotes/ColdBlood
+@onready var logic = $Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNotes/Logic
+@onready var engineeringAndMathematics = $Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNotes/EngineeringAndMathematics
+@onready var empathyAndPsychology = $Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNotes/EmpathyAndPsychology
+@onready var patience = $Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNotes/Patience
+@onready var painResistance = $Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNotes/PainResistance
+@onready var distanceWalking = $Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNotes/DistanceWalking
+@onready var powerLifting = $Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNotes/PowerLifting
+@onready var selfDefenseAndArcadianWrestling = $Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNotes/SelfDefenseAndArcadianWrestling
+@onready var weaponsHandling = $Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNotes/WeaponsHandling
 
 @onready var returnLinkFromId = $Id/Return
 
@@ -81,6 +99,24 @@ func handleClickAspirationLink(aspirationLinkText: String):
 	entertainment.text = str(aspirationEntity.getAgility()['entertainment'])
 	stealthAndInfiltration.text = str(aspirationEntity.getAgility()['stealth_and_infiltration'])
 	magicTricksAndGambling.text = str(aspirationEntity.getAgility()['magic_tricks_and_gambling'])
+	historyAndPolitics.text = str(aspirationEntity.getAssiduity()['history_and_politics'])
+	cookingAndBotany.text = str(aspirationEntity.getAssiduity()['cooking_and_botany'])
+	religionAndArcane.text = str(aspirationEntity.getAssiduity()['religion_and_arcane'])
+	bargainingAndInvestment.text = str(aspirationEntity.getEloquence()['bargaining_and_investment'])
+	lieAndPersuasion.text = str(aspirationEntity.getEloquence()['lie_and_persuasion'])
+	foreignLanguage.text = str(aspirationEntity.getEloquence()['foreign_language'])
+	feelingAndAction.text = str(aspirationEntity.getSixthSense()['feeling_and_action'])
+	stealingAndLocksmithing.text = str(aspirationEntity.getSixthSense()['stealing_and_locksmithing'])
+	coldBlood.text = str(aspirationEntity.getSixthSense()['cold_blood'])
+	logic.text = str(aspirationEntity.getSmartness()['logic'])
+	engineeringAndMathematics.text = str(aspirationEntity.getSmartness()['engineering_and_mathematics'])
+	empathyAndPsychology.text = str(aspirationEntity.getSmartness()['empathy_and_psychology'])
+	patience.text = str(aspirationEntity.getStamina()['patience'])
+	painResistance.text = str(aspirationEntity.getStamina()['pain_resistance'])
+	distanceWalking.text = str(aspirationEntity.getStamina()['distance_walking'])
+	powerLifting.text = str(aspirationEntity.getStrength()['powerlifting'])
+	selfDefenseAndArcadianWrestling.text = str(aspirationEntity.getStrength()['self_defense_and_arcadian_wrestling'])
+	weaponsHandling.text = str(aspirationEntity.getStrength()['weapons_handling'])
 	id.show()
 	
 func aspirationMatching(aspirationLinkText: String):
