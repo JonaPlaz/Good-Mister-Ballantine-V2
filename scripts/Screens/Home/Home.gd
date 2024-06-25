@@ -56,9 +56,16 @@ var aspirationEntity: Aspiration = null
 @onready var returnLinkFromId = $Id/Return
 
 func _ready():
+	hideElementsBeforeLoadHome()
+	dynamizeAspirationLinkButton()
+	
+func hideElementsBeforeLoadHome():
 	playMenu.hide()
 	brainAspiration.hide()
 	aspirationNames.hide()
+	id.hide()
+
+func dynamizeAspirationLinkButton():
 	artistLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(artistLinkButton.text))
 	entrepreneurLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(entrepreneurLinkButton.text))
 	executorLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(executorLinkButton.text))
@@ -69,7 +76,6 @@ func _ready():
 	unemployedLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(unemployedLinkButton.text))
 	unionLeaderLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(unionLeaderLinkButton.text))
 	vagabondLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(vagabondLinkButton.text))
-	id.hide()
 	
 func handleClickPlay():
 	playMenu.show()
