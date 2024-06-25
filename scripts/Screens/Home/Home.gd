@@ -84,39 +84,10 @@ func handleClickNewGame():
 	aspirationNames.show()
 	
 func handleClickAspirationLink(aspirationLinkText: String):
-	titleGame.hide()
+	hideElementsBeforeShowId()
 	var aspirationNameMatched = aspirationMatching(aspirationLinkText)
-	aspirationEntity = Aspiration.new().create(aspirationNameMatched)
-	brainAspiration.hide()
-	aspirationNames.hide()
-	playMenu.hide()
-	avatar.texture = load("res://assets/images/home/avatars/" + aspirationNameMatched + ".png")
-	comment.text = aspirationEntity.getComment()
-	generalConscience.text = aspirationEntity.getConscience()['general']
-	specificConscience.text = aspirationEntity.getConscience()['specific']
-	aspirationName.text = aspirationLinkText
-	aspirationSpecialAbility.text = aspirationEntity.getSpecialAbility()
-	entertainment.text = str(aspirationEntity.getAgility()['entertainment'])
-	stealthAndInfiltration.text = str(aspirationEntity.getAgility()['stealth_and_infiltration'])
-	magicTricksAndGambling.text = str(aspirationEntity.getAgility()['magic_tricks_and_gambling'])
-	historyAndPolitics.text = str(aspirationEntity.getAssiduity()['history_and_politics'])
-	cookingAndBotany.text = str(aspirationEntity.getAssiduity()['cooking_and_botany'])
-	religionAndArcane.text = str(aspirationEntity.getAssiduity()['religion_and_arcane'])
-	bargainingAndInvestment.text = str(aspirationEntity.getEloquence()['bargaining_and_investment'])
-	lieAndPersuasion.text = str(aspirationEntity.getEloquence()['lie_and_persuasion'])
-	foreignLanguage.text = str(aspirationEntity.getEloquence()['foreign_language'])
-	feelingAndAction.text = str(aspirationEntity.getSixthSense()['feeling_and_action'])
-	stealingAndLocksmithing.text = str(aspirationEntity.getSixthSense()['stealing_and_locksmithing'])
-	coldBlood.text = str(aspirationEntity.getSixthSense()['cold_blood'])
-	logic.text = str(aspirationEntity.getSmartness()['logic'])
-	engineeringAndMathematics.text = str(aspirationEntity.getSmartness()['engineering_and_mathematics'])
-	empathyAndPsychology.text = str(aspirationEntity.getSmartness()['empathy_and_psychology'])
-	patience.text = str(aspirationEntity.getStamina()['patience'])
-	painResistance.text = str(aspirationEntity.getStamina()['pain_resistance'])
-	distanceWalking.text = str(aspirationEntity.getStamina()['distance_walking'])
-	powerLifting.text = str(aspirationEntity.getStrength()['powerlifting'])
-	selfDefenseAndArcadianWrestling.text = str(aspirationEntity.getStrength()['self_defense_and_arcadian_wrestling'])
-	weaponsHandling.text = str(aspirationEntity.getStrength()['weapons_handling'])
+	loadAvatar(aspirationNameMatched)
+	createAspirationAndcompleteProperties(aspirationNameMatched, aspirationLinkText)
 	id.show()
 	
 func aspirationMatching(aspirationLinkText: String):
@@ -143,6 +114,44 @@ func aspirationMatching(aspirationLinkText: String):
 			return 'vagabond'
 		_:
 			return null
+			
+func createAspirationAndcompleteProperties(aspirationNameMatched: String, aspirationLinkText: String):
+	aspirationEntity = Aspiration.new().create(aspirationNameMatched)
+	comment.text = aspirationEntity.getComment()
+	generalConscience.text = aspirationEntity.getConscience()['general']
+	specificConscience.text = aspirationEntity.getConscience()['specific']
+	aspirationName.text = aspirationLinkText
+	aspirationSpecialAbility.text = aspirationEntity.getSpecialAbility()
+	entertainment.text = str(aspirationEntity.getAgility()['entertainment'])
+	stealthAndInfiltration.text = str(aspirationEntity.getAgility()['stealth_and_infiltration'])
+	magicTricksAndGambling.text = str(aspirationEntity.getAgility()['magic_tricks_and_gambling'])
+	historyAndPolitics.text = str(aspirationEntity.getAssiduity()['history_and_politics'])
+	cookingAndBotany.text = str(aspirationEntity.getAssiduity()['cooking_and_botany'])
+	religionAndArcane.text = str(aspirationEntity.getAssiduity()['religion_and_arcane'])
+	bargainingAndInvestment.text = str(aspirationEntity.getEloquence()['bargaining_and_investment'])
+	lieAndPersuasion.text = str(aspirationEntity.getEloquence()['lie_and_persuasion'])
+	foreignLanguage.text = str(aspirationEntity.getEloquence()['foreign_language'])
+	feelingAndAction.text = str(aspirationEntity.getSixthSense()['feeling_and_action'])
+	stealingAndLocksmithing.text = str(aspirationEntity.getSixthSense()['stealing_and_locksmithing'])
+	coldBlood.text = str(aspirationEntity.getSixthSense()['cold_blood'])
+	logic.text = str(aspirationEntity.getSmartness()['logic'])
+	engineeringAndMathematics.text = str(aspirationEntity.getSmartness()['engineering_and_mathematics'])
+	empathyAndPsychology.text = str(aspirationEntity.getSmartness()['empathy_and_psychology'])
+	patience.text = str(aspirationEntity.getStamina()['patience'])
+	painResistance.text = str(aspirationEntity.getStamina()['pain_resistance'])
+	distanceWalking.text = str(aspirationEntity.getStamina()['distance_walking'])
+	powerLifting.text = str(aspirationEntity.getStrength()['powerlifting'])
+	selfDefenseAndArcadianWrestling.text = str(aspirationEntity.getStrength()['self_defense_and_arcadian_wrestling'])
+	weaponsHandling.text = str(aspirationEntity.getStrength()['weapons_handling'])
+	
+func hideElementsBeforeShowId():
+	titleGame.hide()
+	brainAspiration.hide()
+	aspirationNames.hide()
+	playMenu.hide()
+
+func loadAvatar(aspirationNameMatched: String):
+	avatar.texture = load("res://assets/images/home/avatars/" + aspirationNameMatched + ".png")
 
 func handleClickReturnFromAspiration():
 	brainAspiration.hide()
