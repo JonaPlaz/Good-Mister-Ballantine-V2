@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dctom5sgfcf5s"]
+[gd_scene load_steps=18 format=3 uid="uid://dctom5sgfcf5s"]
 
 [ext_resource type="Script" path="res://scripts/Screens/Home/Home.gd" id="1_4h1wy"]
 [ext_resource type="PackedScene" uid="uid://cld4vq3ng2ovs" path="res://nodes/Screens/Home/Textures/Background.tscn" id="2_0wfuj"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bxh1i73ujkr3" path="res://nodes/Screens/Home/Texts/AspirationName.tscn" id="12_bt05l"]
 [ext_resource type="PackedScene" uid="uid://bxeoipm3ohvf5" path="res://nodes/Screens/Home/Texts/AspirationSpecialAbility.tscn" id="13_5snk1"]
 [ext_resource type="PackedScene" uid="uid://bw8gxcc2kv0w7" path="res://nodes/Screens/Home/Texts/AspirationAbilityName.tscn" id="14_ny567"]
+[ext_resource type="PackedScene" uid="uid://b7k74tbiwjf1u" path="res://nodes/Screens/Home/Containers/AspirationAbilityDictionaryNames.tscn" id="15_8h6w8"]
 [ext_resource type="PackedScene" uid="uid://5bd62qbv5772" path="res://nodes/Screens/Home/Texts/AspirationAbilityDictionaryName.tscn" id="15_fwmqq"]
 [ext_resource type="PackedScene" uid="uid://c52slcxji054l" path="res://nodes/Screens/Home/Texts/AspirationAbilityDictionaryNote.tscn" id="16_ip16u"]
 
@@ -269,11 +270,8 @@ theme_override_constants/separation = 10
 layout_mode = 2
 text = "Agilité"
 
-[node name="AgilityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AgilityContainer"]
-custom_minimum_size = Vector2(470, 0)
+[node name="AgilityDictionaryNames" parent="Id/AbilitiesContainer/AgilityContainer" instance=ExtResource("15_8h6w8")]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = -8
 
 [node name="Entertainment" parent="Id/AbilitiesContainer/AgilityContainer/AgilityDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
@@ -309,11 +307,8 @@ theme_override_constants/separation = 10
 layout_mode = 2
 text = "Assiduité"
 
-[node name="AssiduityDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/AssiduityContainer"]
-custom_minimum_size = Vector2(470, 0)
+[node name="AssiduityDictionaryNames" parent="Id/AbilitiesContainer/AssiduityContainer" instance=ExtResource("15_8h6w8")]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = -8
 
 [node name="HistoryAndPolitics" parent="Id/AbilitiesContainer/AssiduityContainer/AssiduityDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
@@ -349,11 +344,8 @@ theme_override_constants/separation = 10
 layout_mode = 2
 text = "Éloquence"
 
-[node name="EloquenceDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/EloquenceContainer"]
-custom_minimum_size = Vector2(470, 0)
+[node name="EloquenceDictionaryNames" parent="Id/AbilitiesContainer/EloquenceContainer" instance=ExtResource("15_8h6w8")]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = -8
 
 [node name="BargainingAndInvestment" parent="Id/AbilitiesContainer/EloquenceContainer/EloquenceDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
@@ -389,11 +381,8 @@ theme_override_constants/separation = 10
 layout_mode = 2
 text = "6 sens"
 
-[node name="SixthSenseDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/SixthSenseContainer"]
-custom_minimum_size = Vector2(470, 0)
+[node name="SixthSenseDictionaryNames" parent="Id/AbilitiesContainer/SixthSenseContainer" instance=ExtResource("15_8h6w8")]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = -8
 
 [node name="FeelingAndAction" parent="Id/AbilitiesContainer/SixthSenseContainer/SixthSenseDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
@@ -429,11 +418,8 @@ theme_override_constants/separation = 10
 layout_mode = 2
 text = "Intelligence"
 
-[node name="SmartnessDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/SmartnessContainer"]
-custom_minimum_size = Vector2(470, 0)
+[node name="SmartnessDictionaryNames" parent="Id/AbilitiesContainer/SmartnessContainer" instance=ExtResource("15_8h6w8")]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = -8
 
 [node name="Logic" parent="Id/AbilitiesContainer/SmartnessContainer/SmartnessDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
@@ -469,11 +455,8 @@ theme_override_constants/separation = 10
 layout_mode = 2
 text = "Endurance"
 
-[node name="StaminaDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/StaminaContainer"]
-custom_minimum_size = Vector2(470, 0)
+[node name="StaminaDictionaryNames" parent="Id/AbilitiesContainer/StaminaContainer" instance=ExtResource("15_8h6w8")]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = -8
 
 [node name="Patience" parent="Id/AbilitiesContainer/StaminaContainer/StaminaDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
@@ -509,11 +492,8 @@ theme_override_constants/separation = 10
 layout_mode = 2
 text = "Force"
 
-[node name="StrengthDictionaryNames" type="VBoxContainer" parent="Id/AbilitiesContainer/StrengthContainer"]
-custom_minimum_size = Vector2(470, 0)
+[node name="StrengthDictionaryNames" parent="Id/AbilitiesContainer/StrengthContainer" instance=ExtResource("15_8h6w8")]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = -8
 
 [node name="PowerLifting" parent="Id/AbilitiesContainer/StrengthContainer/StrengthDictionaryNames" instance=ExtResource("15_fwmqq")]
 layout_mode = 2
