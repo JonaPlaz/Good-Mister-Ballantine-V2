@@ -57,7 +57,7 @@ var aspirationEntity: Aspiration = null
 
 func _ready():
 	hideElementsBeforeLoadHome()
-	dynamizeAspirationLinkButton()
+	connectAspirationLinkButtons()
 	
 func hideElementsBeforeLoadHome():
 	playMenu.hide()
@@ -65,7 +65,7 @@ func hideElementsBeforeLoadHome():
 	aspirationNames.hide()
 	id.hide()
 
-func dynamizeAspirationLinkButton():
+func connectAspirationLinkButtons():
 	artistLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(artistLinkButton.text))
 	entrepreneurLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(entrepreneurLinkButton.text))
 	executorLinkButton.connect("pressed", Callable(self, "handleClickAspirationLink").bind(executorLinkButton.text))

@@ -20,8 +20,8 @@
 [node name="Home" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1600.0
+offset_bottom = 900.0
 script = ExtResource("1_4h1wy")
 
 [node name="Background" parent="." instance=ExtResource("2_0wfuj")]
@@ -63,9 +63,8 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = 76.0
-offset_right = 448.0
-offset_bottom = 221.0
+offset_top = 50.0
+offset_bottom = 195.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -194,6 +193,7 @@ theme_override_font_sizes/font_size = 28
 text = "Retour"
 
 [node name="Id" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
